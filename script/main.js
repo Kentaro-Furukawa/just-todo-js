@@ -1,3 +1,4 @@
+import ToDoItem from "./ToDoItem.js";
 import uuidv4 from "./uuidv4.js";
 
 let todoItems;
@@ -6,14 +7,6 @@ window.onload = () => {
   todoItems = []
   renderTodoList()
   
-}
-
-class ToDoItem {
-  constructor(id, task, isCmpleted) {
-    this.id = id;
-    this.task = task;
-    this.isCmpleted = isCmpleted;
-  }
 }
 
 function renderTodoList() {
@@ -91,7 +84,6 @@ function completeTodoItem(targetID) {
 }
 
 function deleteTodoItem(targetID) {
-  console.log("deletes", targetID)
   todoItems = todoItems.filter(
     (todoItem) => todoItem.id != targetID
   )
