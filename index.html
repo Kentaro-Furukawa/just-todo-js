@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/reset.css">
   <script type="module" src="./script/main.js"></script>
   <title>Just ToDo list</title>
 </head>
-<body>
-  <h1>Just Simple Todo in JS</h1>
-  <p>Explore my ToDo app in pure JavaScript. Efficient task management using dynamic DOM manipulation.</p>
-  <div>
-    <input type="text" id="todoInput" placeholder="Add new todo">
-    <button id="addButton">Add</button>
-  </div>
 
-  <div id="todoList"></div>
+<body>
+  <div class="main">
+    <h1 class="block-title">Just Simple Todo in JS</h1>
+    <p class="lead">Explore my ToDo app in pure JavaScript. Efficient task management using dynamic DOM manipulation.</p>
+    <div class="input-wrap">
+      <input type="text" id="todoInput" placeholder="Add new todo">
+      <button id="addButton">Add</button>
+    </div>
+  
+    <div id="todoList"></div>
+  
+  </div>
 </body>
+
 </html>
