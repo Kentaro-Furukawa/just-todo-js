@@ -70,7 +70,8 @@ addButton.addEventListener('click', () => {
 
   renderTodoList();
 
-  input.value = '';
+  input.value = ''
+  input.focus()
 })
 
 function completeTodoItem(targetID) {
