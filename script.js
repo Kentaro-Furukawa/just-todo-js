@@ -1,4 +1,10 @@
-let todoItems = [];
+
+let todoItems;
+
+window.onload = () => {
+  todoItems = []
+  renderTodoList()
+}
 
 class ToDoItem {
   constructor(id, task, isCmpleted) {
@@ -6,13 +12,6 @@ class ToDoItem {
     this.task = task;
     this.isCmpleted = isCmpleted;
   }
-
-}
-
-function uuidv4() {
-  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  );
 }
 
 function renderTodoList() {
@@ -63,9 +62,6 @@ function renderTodoList() {
   todoList.appendChild(content)
 }
 
-renderTodoList();
-
-
 const addButton = document.getElementById('addButton')
 
 addButton.addEventListener('click', () => {
@@ -100,3 +96,10 @@ function deleteTodoItem(targetID) {
 
   renderTodoList();
 }
+
+function uuidv4() {
+  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
