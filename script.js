@@ -1,10 +1,15 @@
+import uuidv4 from "./uuidv4.js";
 
 let todoItems;
 
 window.onload = () => {
   todoItems = []
   renderTodoList()
+  
 }
+
+window.deleteTodoItem = deleteTodoItem;
+window.completeTodoItem = completeTodoItem;
 
 class ToDoItem {
   constructor(id, task, isCmpleted) {
@@ -66,7 +71,7 @@ const addButton = document.getElementById('addButton')
 
 addButton.addEventListener('click', () => {
   const input = document.getElementById('todoInput')
-  inputValue = input.value.trim()
+  const inputValue = input.value.trim()
   if (!inputValue) {
     return
   }
@@ -96,10 +101,3 @@ function deleteTodoItem(targetID) {
 
   renderTodoList();
 }
-
-function uuidv4() {
-  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  );
-}
-
