@@ -8,9 +8,6 @@ window.onload = () => {
   
 }
 
-window.deleteTodoItem = deleteTodoItem;
-window.completeTodoItem = completeTodoItem;
-
 class ToDoItem {
   constructor(id, task, isCmpleted) {
     this.id = id;
@@ -48,14 +45,14 @@ function renderTodoList() {
     const completeButton = document.createElement('button')
     completeButton.setAttribute("type", "submit")
     completeButton.setAttribute("value", todoItem.id)
-    completeButton.setAttribute("onClick", `completeTodoItem("${todoItem.id}")`)
     completeButton.innerText = "Complete"
+    completeButton.addEventListener('click', () => { completeTodoItem(todoItem.id) })
     todoListItemElement.append(completeButton)
 
     const deleteButton = document.createElement('button')
     deleteButton.setAttribute("type", "submit")
     deleteButton.setAttribute("value", todoItem.id)
-    deleteButton.setAttribute("onClick", `deleteTodoItem("${todoItem.id}")`)
+    deleteButton.addEventListener('click', () => { deleteTodoItem(todoItem.id) })
     deleteButton.innerText = "Delete"
     todoListItemElement.append(deleteButton)
 
