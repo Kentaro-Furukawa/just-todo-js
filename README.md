@@ -2,7 +2,7 @@
 
 Just-TODO-JS is a simplistic to-do list application developed with plain JavaScript, CSS and HTML. This app allows you to jot down your tasks and strike them off as you complete them. Perfect for those who enjoy minimal, lightweight, and straightforward task management.
 
-<!--- ![Application Interface](/images/app-interface.png) --->
+![Application Interface](/images/app-interface.png)
 
 ## Table of Contents
 
